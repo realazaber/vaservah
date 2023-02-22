@@ -10,7 +10,7 @@
     "dev:ssr": "ng run vaservah:serve-ssr",
     "serve:ssr": "node dist/vaservah/server/main.js",
     "build:ssr": "ng build && ng run vaservah:server",
-    "prerender": "ng run vaservah:prerender"
+    "prerender": "ng run vaservah:prerender --routes-file routes.txt"
   },
   "private": true,
   "dependencies": {
