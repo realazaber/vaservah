@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PostComponent } from './components/post/post.component';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { PostComponent } from './components/post/post.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
