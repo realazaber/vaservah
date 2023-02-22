@@ -1,4 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    * {
+        @apply duration-300;
+    }
+    html {
+        body {
+            @apply overflow-x-hidden bg-bg-sec text-txt-pri;
+            
+            h3 {
+                @apply text-xl;
+            }
+
+            p {
+                @apply text-lg;
+            }
+        }
+    }
+
+    .nav-link {
+        @apply text-txt-pri text-xl mx-5 hover:text-txt-sec flex items-center capitalize;
+    }
+    .end-link {
+        @apply text-txt-pri text-xl mx-5 hover:text-txt-sec flex items-center capitalize phone:ml-auto;
+    }
+
+    .bg-bedrock {
+        background-image: url("./assets/images/bg-images/bedrock.png");
+    }
+}
