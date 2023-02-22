@@ -5,7 +5,7 @@
 
 @layer components {
     * {
-        @apply duration-300;
+        @apply duration-300 scroll-smooth;
     }
     html {
         body {
