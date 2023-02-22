@@ -1,1 +1,17 @@
-<p>post works!</p>
+<a class="w-full h-[60%] pt-0" [routerLink]="['/posts/', postId]">
+    <img
+      class="rounded-t-lg h-full w-full object-cover"
+      src="{{ imgSrc }}"
+      alt="{{ title }}"
+    />
+  </a>
+  <div class="w-full h-[40%] px-8 py-3 text-left">
+    <h3
+      class="w-full hover:underline hover:cursor-pointer text-txt-sec"
+      [routerLink]="['/posts/', postId]"
+    >
+      {{ title }}
+    </h3>
+    <p>{{ excerpt }}</p>
+  </div>
+  

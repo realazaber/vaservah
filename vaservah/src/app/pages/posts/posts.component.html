@@ -1,1 +1,14 @@
-<p>posts works!</p>
+<div>
+  <div
+    class="w-full m-auto flex flex-row flex-wrap justify-center content-center"
+  >
+    <app-post
+      class="bg-bg-pri opacity-90 rounded-lg h-80 mt-8 tablet:m-3 w-full tablet:w-[40%] phablet:w-[30%] desktop:w-1/4 flex flex-col justify-center items-center pt-0"
+      *ngFor="let post of posts"
+      [postId]="post.id"
+      [title]="post.title"
+      [excerpt]="post.excerpt"
+      [imgSrc]="post.teaserPath"
+    ></app-post>
+  </div>
+</div>
