@@ -8,6 +8,7 @@
         @apply duration-300 scroll-smooth;
     }
     html {
+        @apply overflow-y-scroll;
         body {
             @apply overflow-x-hidden bg-bg-sec text-txt-pri;
             
