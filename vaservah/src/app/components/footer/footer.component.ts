@@ -12,9 +12,13 @@ export class FooterComponent implements OnInit {
   constructor(private urls: GetUrlsService) { }
 
   links: Link[] = [];
+  currentYear: string = "";
 
   ngOnInit(): void {
     this.urls.getUrls().subscribe((data) => this.links = data);
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    this.currentYear = currentYear.toString();
   }
 
 }
