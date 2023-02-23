@@ -10,7 +10,8 @@
     class="w-full hover:underline hover:cursor-pointer text-txt-sec"
     [routerLink]="['/posts/', postId]"
   >
-    {{ title }}
+    <div [innerHTML]="title"></div>
   </h3>
-  <p>{{ excerpt }}</p>
+
+  <div [innerHTML]="excerpt"></div>
 </div>
