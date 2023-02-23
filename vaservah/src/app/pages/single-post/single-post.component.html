@@ -16,6 +16,6 @@
     </h1>
   </div>
 
-  <p class="my-5">{{ post.body }}</p>
+  <div class="my-5" [innerHTML]="post.body"></div>
   <p class="mb-0">Category: {{ post.category }}</p>
 </div>
