@@ -14,7 +14,7 @@ export class GetPostsService {
   baseUrl: string = "https://vaservah.azaber.com/wp-json/wp/v2/posts";
 
   getPosts(postLimit: Number): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.baseUrl}/?limit=${postLimit}`);
+    return this.http.get<Post[]>(`${this.baseUrl}/?per_page=${postLimit}`);
   }
 
   getPost(postId: Number): Observable<any> {
