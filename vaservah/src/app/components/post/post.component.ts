@@ -17,7 +17,6 @@ export class PostComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    //console.log(`Post ${this.postId} ${this.title} ${this.excerpt}`);
     this.excerpt = this.excerpt.substring(0, 50);
   }
 
