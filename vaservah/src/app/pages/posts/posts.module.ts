@@ -14,6 +14,9 @@ import { PostComponent } from 'src/app/components/post/post.component';
   imports: [
     CommonModule,
     PostsRoutingModule
+  ],
+  exports: [
+    PostsComponent
   ]
 })
 export class PostsModule { }
