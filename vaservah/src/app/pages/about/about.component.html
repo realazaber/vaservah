@@ -4,4 +4,9 @@
   alt="{{ aboutBannerImgAlt }}"
 />
 
-<p class="py-3">{{ aboutPgraph }}</p>
+<div class="py-3" [innerHtml]="aboutPgraph"></div>
+
+<div class="pt-3">
+  <h2 class="w-[80%] mx-auto">Latest posts</h2>
+  <app-posts [postLimit]="3"></app-posts>
+</div>
