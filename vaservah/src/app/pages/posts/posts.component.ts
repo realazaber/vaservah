@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { GetPostsService } from 'src/app/services/get-posts.service';
 import { Observable } from 'rxjs';
 import { Post } from 'src/app/interfaces/Post';
+import { SanitizeService } from 'src/app/services/sanitize.service';
 
 @Component({
   selector: 'app-posts',
@@ -14,7 +15,7 @@ export class PostsComponent implements OnInit {
   tmpPosts: any[] = [];
   posts: Post[] = [];
 
-  constructor(private postsData: GetPostsService) { }
+  constructor(private postsData: GetPostsService, private sanitizer: SanitizeService) { }
 
   ngOnInit(): void {
     this.postsData.getPosts(15).subscribe((data) => {
