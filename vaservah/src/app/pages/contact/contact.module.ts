@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {MatInputModule} from '@angular/material/input';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 
@@ -11,7 +11,8 @@ import { ContactComponent } from './contact.component';
   ],
   imports: [
     CommonModule,
-    ContactRoutingModule
+    ContactRoutingModule,
+    MatInputModule
   ]
 })
 export class ContactModule { }
