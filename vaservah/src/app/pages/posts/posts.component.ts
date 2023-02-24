@@ -24,7 +24,6 @@ export class PostsComponent implements OnInit {
       this.tmpPosts.forEach(element => {
         this.posts.push(new Post(element.id, element.title.rendered, element.content.rendered, element.featured_media_src_url, element.slug, element.link));
       });
-      console.log("proper posts", this.posts);
     });
     
   }
