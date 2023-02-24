@@ -9,11 +9,11 @@ import { SanitizeService } from 'src/app/services/sanitize.service';
 })
 export class AboutComponent {
 
-  aboutPgraph: SafeValue = "About content";
-  aboutBannerImg: String = "pathtobanner";
-  aboutBannerImgAlt: String = "Alt text";
+  aboutPgraph: string = "About content";
+  aboutBannerImg: string = "pathtobanner";
+  aboutBannerImgAlt: string = "Alt text";
 
-  constructor(private pagesService: GetPagesService, private sanitizer: SanitizeService) {
+  constructor(private pagesService: GetPagesService) {
 
   }
 
@@ -21,7 +21,7 @@ export class AboutComponent {
     this.pagesService.getPageData('26').subscribe((data) => {
       this.aboutBannerImgAlt = data.better_featured_image.alt_text;
       this.aboutBannerImg = data.better_featured_image.media_details.sizes.large.source_url;
-      this.aboutPgraph = this.sanitizer.sanitizeVar(data.content.rendered);
+      this.aboutPgraph = data.content.rendered;
     })
   }
 }

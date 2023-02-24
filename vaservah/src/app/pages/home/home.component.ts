@@ -13,13 +13,13 @@ export class HomeComponent {
   homeBannerImg: string = "pathtobanner";
   homeBannerImgAlt: string = "Alt text";
 
-  constructor(private pagesService: GetPagesService, private santizier: SanitizeService) {
+  constructor(private pagesService: GetPagesService) {
 
   }
 
   ngOnInit(): void {
     this.pagesService.getPageData('24').subscribe((data) => {
-      this.homePgraph = this.santizier.sanitizeVar(data.content.rendered);
+      this.homePgraph = data.content.rendered;
       this.homeBannerImgAlt = data.better_featured_image.alt_text;
       this.homeBannerImg = data.better_featured_image.media_details.sizes.large.source_url;
 
