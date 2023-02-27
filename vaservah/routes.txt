@@ -1,3 +1,6 @@
-/posts/7
-/posts/20
 /posts/66
+/posts/107
+/posts/112
+/posts/113
+/posts/114
+/posts/115
