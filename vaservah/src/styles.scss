@@ -17,7 +17,7 @@
                 @apply text-4xl;
             }
             h2 {
-                @apply text-3xl;
+                @apply text-3xl font-semibold;
             }
             h3 {
                 @apply text-xl;
@@ -45,6 +45,6 @@
     }
 
     input, textarea {
-        @apply text-slate-50 p-3 border-[3px] rounded-md border-txt-sec bg-slate-800 block w-full;
+        @apply text-slate-50 p-3 border-[3px] rounded-md border-green-600 bg-slate-800 block w-full;
     }
 }
