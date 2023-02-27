@@ -1,7 +1,7 @@
 var fs = require('fs');
 var routesArr = "";
 for (var i = 0; i <= 30; i++) {
-    routesArr = routesArr + "posts/" + i + "\n";
+    routesArr = routesArr + "/posts/" + i + "\n";
     console.log(routesArr);
 }
 fs.writeFile('routes.txt', routesArr, function (err) {
