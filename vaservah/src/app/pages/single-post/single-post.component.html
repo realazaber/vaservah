@@ -1,0 +1,21 @@
+<div class="mt-[-3rem] w-full flex flex-col">
+  <div class="z-[15] relative">
+    <img
+      class="w-[100vw] h-96 object-cover z-10 opacity-90"
+      src="{{ post.teaserPath }}"
+      alt="{{ post.title }}"
+    />
+    <div
+      class="absolute top-0 left-0 w-full h-full bg-slate-700 opacity-50"
+    ></div>
+
+    <h1
+      class="absolute z-20 text-slate-50 top-[30%] left-6 text-5xl font-extrabold"
+    >
+      {{ post.title }}
+    </h1>
+  </div>
+
+  <div class="my-5" [innerHTML]="post.body"></div>
+  <p class="mb-0">Category: {{ post.category }}</p>
+</div>
