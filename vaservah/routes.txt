@@ -1,3 +1,7 @@
+/home
+/about
+/contact
+/posts
 /posts/66
 /posts/107
 /posts/112
