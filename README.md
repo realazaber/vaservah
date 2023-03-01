@@ -4,5 +4,6 @@ Angular blog for my Minecraft Bedrock server.
 ## TODOs
 
 ### Content
-- Meet the squad Bryce
-- Meet the squad Ben
+- Mayors post: Bryce
+- Meet the squad Bryce: Bryce
+- Meet the squad Ben: Ben
