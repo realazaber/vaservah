@@ -13,7 +13,7 @@ export class GetUrlsService {
   constructor(private http: HttpClient) { }
 
    getUrls(): Observable<Link[]> {
-     return this.http.get<Link[]>("http://localhost:4200/assets/libs/urls.json");    
+     return this.http.get<Link[]>("/assets/libs/urls.json");    
    }
 
 
