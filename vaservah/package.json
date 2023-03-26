@@ -10,7 +10,8 @@
     "dev:ssr": "ng run vaservah:serve-ssr",
     "serve:ssr": "node dist/vaservah/server/main.js",
     "build:ssr": "ng build && ng run vaservah:server",
-    "prerender": "ng run vaservah:prerender --routes-file routes.txt"
+    "prerender": "ng run vaservah:prerender --routes-file routes.txt",
+    "start-boost": "node --max_old_space_size=32768 ./node_modules/@angular/cli/bin/ng serve"
   },
   "private": true,
   "dependencies": {
