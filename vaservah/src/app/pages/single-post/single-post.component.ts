@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/interfaces/Post';
 import { GetPostsService } from 'src/app/services/get-posts.service';
 import { SanitizeService } from 'src/app/services/sanitize.service';
+
 
 @Component({
   selector: 'app-single-post',
@@ -11,7 +13,7 @@ import { SanitizeService } from 'src/app/services/sanitize.service';
 })
 export class SinglePostComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private postsData: GetPostsService, private sanitizer: SanitizeService) { }
+  constructor(private route: ActivatedRoute, private postsData: GetPostsService, private sanitizer: SanitizeService, private meta: Meta) { }
 
   post: Post = new Post(0, "title", "body", "teaser", "postPath", "wpPostPath");
   postId: number = 0;
@@ -31,6 +33,12 @@ export class SinglePostComponent implements OnInit {
 
         let newPost = new Post(data.id, data.title.rendered, data.content.rendered, data.featured_media_src_url, data.slug, data.link);
         this.post = newPost;
+
+      this.meta.updateTag({ name: 'title', content: this.post.title });
+      this.meta.updateTag({ name: 'description', content: this.post.body });
+      this.meta.updateTag({ property: 'og:title', content: this.post.title });
+      this.meta.updateTag({ property: 'og:description', content: this.post.body });
+      this.meta.updateTag({ property: 'og:image', content: this.post.teaserPath });
     })
   }
 
